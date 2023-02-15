@@ -1,5 +1,7 @@
 let nome = prompt("Qual é o seu nome?");
-
+while (nome === "") {
+    nome = prompt("Por favor, digite seu nome:");
+}
 function exibirAlerta() {
     alert("Tudo certo! " + nome + ".\n Sua inscrição será efetivada em 2 dias após o pagamento do boleto.");
 }
