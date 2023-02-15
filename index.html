@@ -4,105 +4,129 @@
 <head>
     <title>CodeFusion</title>
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha384-ZJGCcV/DW0sL6UtkOW6UjJLkOSDhviEWZ9UVTslsHJj80hCvE+OaLwTrzpf8p1WJ" crossorigin="anonymous">
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <header class="color1">
-        <nav class="navbar">
+    <header id="color1">
+        <nav id="navbar">
             <img src="assets/img/logo.png" alt="Logo da empresa">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Cursos</a></li>
+                <li><a href="#courses">Cursos</a></li>
                 <li><a href="#">Sobre nós</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <main class="main">
-        <section class="featured">
+    <main id="main">
+        <section id="featured">
             <h2>Aprenda a programar de forma fácil e divertida com a CodeFusion!</h2>
             <p>Oferecemos cursos de HTML, CSS, JavaScript, Banco de Dados e muito mais. E em breve teremos novos cursos
                 para
                 você se aprimorar ainda mais.</p>
-            <a href="#" class="btn color3">Inscreva-se agora!</a>
+            <button href="#" id="btn-featured" onclick="exibirAlerta()" >Inscreva-se agora!</button>
         </section>
-        <section class="courses">
+        <section id="courses">
             <h2>Nossos Cursos:</h2>
             <ul>
-                <li class="course">
-                    <h3>HTML</h3>
+                <li id="course">
                     <img src="assets/img/html.jpg" alt="Curso de HTML">
-                    <p>Descrição do curso aqui. <span class="course-price">Preço: <del>$19,99</del></p></span>
-                    <a href="#" class="btn color5">Botão de inscrição aqui.</a>
-                </li >
-                <li class="course">
-                    <h3>CSS</h3>
+                    <div id="description">
+                        <h3>HTML - Básico | 15 horas</h3>
+                        <p>Neste curso, você aprenderá a criar e estruturar páginas da web utilizando a linguagem HTML,
+                            incluindo a criação de formulários, listas, tabelas e outros elementos essenciais.<br> <span
+                                id="course-price"> Preço: <del>$59,99</del> </span>
+                            <br><span id="course-price-end">Apenas: $19,99</span>
+                            <button href="#" id="btn" onclick="exibirAlerta()" >Inscreva-se agora!</button>
+                        </p>
+
+                    </div>
+                </li>
+                <li id="course">
                     <img src="assets/img/css.png" alt="Curso de CSS">
-                    <p>Descrição do curso aqui.<span class="course-price"> Preço: <del>$39,99</del></p></span>
-                    <a href="#" class="btn color5">Botão de inscrição aqui.</a>
+                    <div id="description">
+                        <h3>CSS - Básico | 12 horas</h3>
+                        <p>Neste curso, você aprenderá a criar estilos visuais para páginas da web utilizando a
+                            linguagem CSS, incluindo a formatação de texto, cores, layout e outros aspectos importantes
+                            do design de interfaces.<br> <span id="course-price"> Preço: <del>$59,99</del> </span>
+                            <br><span id="course-price-end">Apenas: $19,99</span>
+                            <button href="#" id="btn" onclick="exibirAlerta()">Inscreva-se agora!</button>
+                        </p>
+
+                    </div>
                 </li>
-                <li class="course">
-                    <h3>JavaScript</h3>
+                <li id="course">
                     <img src="assets/img/js.png" alt="Curso de JS">
-                    <p>Descrição do curso aqui.  <span class="course-price"> Preço: <del>$59,99</del> </span> <br><span class="course-price-end">Apenas : $59,99</span></p>
-                    <a href="#" class="btn color5">Botão de inscrição aqui.</a>
+                    <div id="description">
+                        <h3>JavaScript - Básico | 25 horas</h3>
+                        <p>Neste curso, você aprenderá a programar com a linguagem JavaScript, incluindo a manipulação
+                            de elementos da página, a validação de formulários e a criação de animações e interações
+                            dinâmicas.<br> <span id="course-price"> Preço: <del>$59,99</del> </span>
+                            <br><span id="course-price-end">Apenas: $39,99</span>
+                            <button href="#" id="btn" onclick="exibirAlerta()">Inscreva-se agora!</button>
+                        </p>
+
+                    </div>
                 </li>
-                <li class="course">
-                    <h3>Banco de Dados</h3>
+                <li id="course">
                     <img src="assets/img/banco.png" alt="Curso de Banco de Dados">
-                    <p>Neste curso, você aprenderá os fundamentos do banco de dados, incluindo a criação e gestão de tabelas, a escrita de consultas SQL e o desenvolvimento de aplicações que utilizam bancos de dados para armazenar e recuperar informações. <span class="course-price">  Preço: <del>$99,99</del></span> <span class="course-price-end">$59,99</span></p>
-                    <a href="#" class="btn color5">Botão de inscrição aqui.</a>
+                    <div id="description">
+                        <h3>Banco de Dados - Básico | 30 horas</h3>
+                        <p>Neste curso, você aprenderá os fundamentos do banco de dados, incluindo a criação e gestão de
+                            tabelas, a escrita de consultas SQL e o desenvolvimento de aplicações que utilizam bancos de
+                            dados para armazenar e recuperar informações.<br> <span id="course-price"> Preço:
+                                <del>$89,99</del> </span>
+                            <br><span id="course-price-end">Apenas: $59,99</span>
+                            <button href="#" id="btn" onclick="exibirAlerta()">Inscreva-se agora!</button>
+                        </p>
+
+                    </div>
                 </li>
             </ul>
         </section>
-        <section class="color2">
+        <section id="new-courses">
             <h2>Em breve teremos novos cursos! Fique ligado(a) em nossa plataforma.</h2>
             <img src="assets/img/soon.jpg" alt="Em Breve">
         </section>
-        <section class="color1">
+        <section id="about-us">
             <h2>Sobre Nós</h2>
             <p>Somos uma equipe de programadores experientes que acredita que a programação pode ser fácil e divertida.
                 Nossa missão é tornar o aprendizado de programação acessível para todos. Na CodeFusion, você aprenderá a
                 programar de forma prática e aplicável, sem rodeios.</p>
         </section>
-        <section class="color5">
-            <h2>Contato</h2>
-            <form>
+        <section id="contact-form">
+            <h2 id="contact-title">Contato</h2>
+            <form onsubmit="exibirMensagem(); return false;">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome"><br>
+                <input type="text" id="nome" name="nome" required><br>
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email"><br>
+                <input type="email" id="email" name="email" required><br>
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui"></textarea>
+                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
 
-                <button type="submit" class="btn-enviar">Enviar</button>
+                <button type="submit" id="btn-enviar">Enviar</button>
 
             </form>
             </div>
     </main>
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2023 CodeFusion. Todos os direitos reservados.</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
+    <footer id="footer">
+        <div id="container">
+            <div id="row">
+                <div id="col-md-6">
+                    <p>&copy; 2023 CodeFusion. Todos os direitos reservados. Desenvolvido por Bruno Paulon.</p>
                 </div>
             </div>
         </div>
 
     </footer>
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
