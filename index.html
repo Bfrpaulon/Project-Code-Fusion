@@ -1,134 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
-    <title>CodeFusion</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha384-ZJGCcV/DW0sL6UtkOW6UjJLkOSDhviEWZ9UVTslsHJj80hCvE+OaLwTrzpf8p1WJ" crossorigin="anonymous">
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Fusion - Cursos de Programação EAD</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- Importando o Tailwind CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/tailwindcss@3.1.1/dist/tailwind.min.css">
 </head>
 
-<body>
-    <header id="color1">
-        <nav id="navbar">
-            <img src="assets/img/logo.png" alt="Logo da empresa">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#courses">Cursos</a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main id="main">
-        <section id="featured">
-            <h2>Aprenda a programar de forma fácil e divertida com a CodeFusion!</h2>
-            <p>Oferecemos cursos de HTML, CSS, JavaScript, Banco de Dados e muito mais. E em breve teremos novos cursos
-                para
-                você se aprimorar ainda mais.</p>
-            <button href="#" id="btn-featured" onclick="exibirAlerta()" >Inscreva-se agora!</button>
-        </section>
-        <section id="courses">
-            <h2>Nossos Cursos:</h2>
-            <ul>
-                <li id="course">
-                    <img src="assets/img/html.jpg" alt="Curso de HTML">
-                    <div id="description">
-                        <h3>HTML - Básico | 15 horas</h3>
-                        <p>Neste curso, você aprenderá a criar e estruturar páginas da web utilizando a linguagem HTML,
-                            incluindo a criação de formulários, listas, tabelas e outros elementos essenciais.<br> <span
-                                id="course-price"> Preço: <del>$59,99</del> </span>
-                            <br><span id="course-price-end">Apenas: $19,99</span>
-                            <button href="#" id="btn" onclick="exibirAlerta()" >Inscreva-se agora!</button>
-                        </p>
+<body class="bg-gray-100">
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow-lg">
+    <div class="container mx-auto py-4">
+      <nav class="flex justify-between items-center">
+        <a href="#" class="font-bold text-gray-800">Code Fusion</a>
+        <ul class="flex items-center">
+          <li><a href="#" class="text-gray-600 hover:text-gray-800 hover:underline py-2 px-4">Cursos</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800 hover:underline py-2 px-4">Blog</a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-800 hover:underline py-2 px-4">Contato</a></li>
+          <li><a href="#" class="bg-blue-500 text-white rounded-lg py-2 px-4 ml-4 hover:bg-blue-600">Entrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-                    </div>
-                </li>
-                <li id="course">
-                    <img src="assets/img/css.png" alt="Curso de CSS">
-                    <div id="description">
-                        <h3>CSS - Básico | 12 horas</h3>
-                        <p>Neste curso, você aprenderá a criar estilos visuais para páginas da web utilizando a
-                            linguagem CSS, incluindo a formatação de texto, cores, layout e outros aspectos importantes
-                            do design de interfaces.<br> <span id="course-price"> Preço: <del>$59,99</del> </span>
-                            <br><span id="course-price-end">Apenas: $19,99</span>
-                            <button href="#" id="btn" onclick="exibirAlerta()">Inscreva-se agora!</button>
-                        </p>
+  <!-- Banner -->
+  <section class="bg-gray-800 py-20">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl leading-tight text-white font-bold mb-8">Aprenda a programar com os melhores cursos EAD</h1>
+      <p class="text-gray-400 text-xl mb-8">Na Code Fusion, você encontra cursos de programação de alta qualidade,
+        ministrados pelos melhores profissionais do mercado.</p>
+      <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">Comece agora</a>
+    </div>
+  </section>
 
-                    </div>
-                </li>
-                <li id="course">
-                    <img src="assets/img/js.png" alt="Curso de JS">
-                    <div id="description">
-                        <h3>JavaScript - Básico | 25 horas</h3>
-                        <p>Neste curso, você aprenderá a programar com a linguagem JavaScript, incluindo a manipulação
-                            de elementos da página, a validação de formulários e a criação de animações e interações
-                            dinâmicas.<br> <span id="course-price"> Preço: <del>$59,99</del> </span>
-                            <br><span id="course-price-end">Apenas: $39,99</span>
-                            <button href="#" id="btn" onclick="exibirAlerta()">Inscreva-se agora!</button>
-                        </p>
-
-                    </div>
-                </li>
-                <li id="course">
-                    <img src="assets/img/banco.png" alt="Curso de Banco de Dados">
-                    <div id="description">
-                        <h3>Banco de Dados - Básico | 30 horas</h3>
-                        <p>Neste curso, você aprenderá os fundamentos do banco de dados, incluindo a criação e gestão de
-                            tabelas, a escrita de consultas SQL e o desenvolvimento de aplicações que utilizam bancos de
-                            dados para armazenar e recuperar informações.<br> <span id="course-price"> Preço:
-                                <del>$89,99</del> </span>
-                            <br><span id="course-price-end">Apenas: $59,99</span>
-                            <button href="#" id="btn" onclick="exibirAlerta()">Inscreva-se agora!</button>
-                        </p>
-
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <section id="new-courses">
-            <h2>Em breve teremos novos cursos! Fique ligado(a) em nossa plataforma.</h2>
-            <img src="assets/img/soon.jpg" alt="Em Breve">
-        </section>
-        <section id="about-us">
-            <h2>Sobre Nós</h2>
-            <p>Somos uma equipe de programadores experientes que acredita que a programação pode ser fácil e divertida.
-                Nossa missão é tornar o aprendizado de programação acessível para todos. Na CodeFusion, você aprenderá a
-                programar de forma prática e aplicável, sem rodeios.</p>
-        </section>
-        <section id="contact-form">
-            <h2 id="contact-title">Contato</h2>
-            <form onsubmit="exibirMensagem(); return false;">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required><br>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
-
-                <button type="submit" id="btn-enviar">Enviar</button>
-
-            </form>
+  <!-- Seção de Cursos -->
+  <section class="py-20">
+    <div class="container mx-auto">
+      <h2 class="text-2xl text-center font-bold mb-8">Cursos em Destaque</h2>
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://source.unsplash.com/random/800x600" alt="Curso de Javascript"
+              class="w-full h-64 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">Curso de Javascript</h3>
+              <p class="text-gray-600 mb-4">Aprenda a programar em Javascript com este curso completo, desde os
+                conceitos básicos até as aplicações mais avançadas.</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">Saiba mais</a>
             </div>
-    </main>
-    <!-- Footer -->
-    <footer id="footer">
-        <div id="container">
-            <div id="row">
-                <div id="col-md-6">
-                    <p>&copy; 2023 CodeFusion. Todos os direitos reservados. Desenvolvido por Bruno Paulon.</p>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://source.unsplash.com/random/800x601" alt="Curso de Python"
+              class="w-full h-64 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">Curso de Python</h3>
+              <p class="text-gray-600 mb-4">Aprenda a programar em Python, uma das linguagens mais populares e versáteis
+                do mercado.</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <img src="https://source.unsplash.com/random/800x602" alt="Curso de Java" class="w-full h-64 object-cover">
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">Curso de Java</h3>
+              <p class="text-gray-600 mb-4">Aprenda a programar em Java, uma das linguagens mais utilizadas no mercado
+                corporativo.</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </footer>
+  <!-- Seção de Depoimentos -->
+  <section class="bg-gray-100 py-20">
+    <div class="container mx-auto">
+      <h2 class="text-2xl text-center font-bold mb-8">O que nossos alunos estão falando</h2>
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full md:w-1/2 px-4 mb-8">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden p-8">
+            <p class="text-gray-600 mb-4">"Excelente curso, com conteúdo atualizado e bem estruturado. Os professores
+              são muito bons e explicam de forma clara e objetiva."</p>
+            <p class="text-gray-800 font-bold">João Silva</p>
+            <p class="text-gray-600">Desenvolvedor Front-End</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 px-4 mb-8">
+          <div class="bg-white shadow-md rounded-lg overflow-hidden p-8">
+            <p class="text-gray-600 mb-4">"O curso superou todas as minhas expectativas. Aprendi muito e já estou
+              colocando em prática todo o conhecimento adquirido."</p>
+            <p class="text-gray-800 font-bold">Maria Santos</p>
+            <p class="text-gray-600">Desenvolvedora Back-End</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Seção de CTA -->
+  <section class="bg-blue-500 py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-2xl text-white font-bold mb-4">Comece agora mesmo a aprender programação!</h2>
+      <p class="text-white mb-8">Tenha acesso aos melhores cursos de programação online, com conteúdos atualizados e
+        professores experientes.</p>
+      <a href="#" class="bg-white hover:bg-gray-200 text-blue-500 font-bold py-2 px-4 rounded-lg">Matricule-se
+        agora!</a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-900 text-white py-10">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2023 Code Fusion - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+  <script>
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 3,
+      gap: 30,
+      breakpoints: {
+        768: {
+          perView: 2
+        },
+        480: {
+          perView: 1
+        }
+      }
+    }).mount();
+  </script>
 </body>
 
 </html>

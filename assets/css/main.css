@@ -16,6 +16,7 @@
   color: #6cbdb5;
 }
 
+
 #color5 {
   color: #1a1f1e;
 }
@@ -24,8 +25,7 @@
 /* ESTILOS */
 
 body {
-  background-color: #e3dfba;
-  margin: 0;
+  backg
   font-family: 'Roboto', sans-serif;
 }
 
@@ -374,26 +374,4 @@ nav img {
   }
 
   #contact-form input,
-  #contact-form textarea {
-    font-size: 10px;
-    padding: 3px;
-  }
-
-  #contact-form button {
-    font-size: 12px;
-    padding: 3px;
-  }
-}
-/* Footer styling */
-footer {
-  background-color: #1a1f1e;
-  color: #e3dfba;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:center;
-  align-items: center;
-  font-size: 14px;
-  text-align: center;
-  margin: auto;
-  }
+  #contact-fo
