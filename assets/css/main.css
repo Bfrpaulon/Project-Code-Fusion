@@ -1,0 +1,58 @@
+#login-modal {
+    display: none;
+  }
+  
+  #login-modal.show {
+    display: block;
+  }
+  
+  #login-modal .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  #login-modal .modal {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  #login-modal .modal h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  #login-modal form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #login-modal input[type="email"],
+  #login-modal input[type="password"] {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  
+  #login-modal button[type="submit"] {
+    background-color: #4b5563;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
