@@ -45,31 +45,33 @@ function loginWithFacebook(accessToken) {
     // Envia o token de acesso do Facebook para o seu servidor para autenticação
     // e redireciona para a página de perfil do usuário após o login
 }
-// Inicializa o Google Sign-In
-function onGoogleLoad() {
-    gapi.load('auth2', function () {
-        auth2 = gapi.auth2.init({
-            client_id: '1038303613358-ulqm7o7bl5655i7ruqbju4rkhrc20qi6.apps.googleusercontent.com',
-            cookiepolicy: 'single_host_origin'
-        });
 
-        // Verifica se o usuário já está conectado e faz o login automaticamente
-        if (auth2.isSignedIn.get() == true) {
-            var profile = auth2.currentUser.get().getBasicProfile();
-            loginWithGoogle(profile.getIdToken());
-        }
-
-        // Manipulador de eventos do botão de login com o Google
-        document.getElementById('google-btn').addEventListener('click', function () {
-            auth2.signIn().then(function (googleUser) {
-                var id_token = googleUser.getAuthResponse().id_token;
-                loginWithGoogle(id_token);
-            });
-        });
+document.getElementById('facebook-btn').addEventListener('click', function() {
+    FB.login(function(response) {
+      checkFacebookLoginStatus(response);
+    }, {scope: 'public_profile,email'});
+  });
+  
+  function checkFacebookLoginStatus(response) {
+    if (response.status === 'connected') {
+      // O usuário já está conectado com o Facebook
+      registerWithFacebook(response.authResponse.accessToken);
+    } else {
+      // O usuário não está conectado com o Facebook
+      console.log('Usuário não conectado com o Facebook.');
+    }
+  }
+  
+  function registerWithFacebook(accessToken) {
+    FB.api('/me?fields=id,name,email,picture', function(response) {
+      var user = {
+        name: response.name,
+        email: response.email,
+        picture: response.picture.data.url,
+        facebook_token: accessToken
+      };
+  
+      // Envia os dados do usuário para o seu servidor para criar uma nova conta de usuário
     });
-}
-
-// Faz o login no site com o token de acesso do Google
-function loginWithGoogle(id_token) {
-    // Envia o token de acesso do Google para o seu servidor para autenticação
-    // e redireciona para a página
+  }
+  
